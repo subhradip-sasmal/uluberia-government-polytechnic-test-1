@@ -1,0 +1,85 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.download-section {
+  padding: 2rem;
+  background: #e9f4ff;
+  text-align: center;
+}
+
+.download-section h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.download-list {
+  list-style: none;
+  padding: 0;
+}
+
+.download-list li {
+  margin: 10px 0;
+}
+
+.download-list a {
+  background: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.download-list a:hover {
+  background: #217dbb;
+}
+
+.footer {
+  background: #d9d9d9;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 14px;
+}

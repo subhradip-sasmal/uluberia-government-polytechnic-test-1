@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>College Chatbot</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    #chatbox { border: 1px solid #ccc; padding: 10px; max-width: 600px; height: 400px; overflow-y: scroll; }
+    .msg { margin: 5px 0; }
+    .user { color: blue; }
+    .bot { color: green; }
+  </style>
+</head>
+<body>
+  <h1>Ask Me About Our College!</h1>
+  <div id="chatbox"></div>
+  <input id="userInput" placeholder="Type your question..." size="50" />
+  <button onclick="sendMessage()">Send</button>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>

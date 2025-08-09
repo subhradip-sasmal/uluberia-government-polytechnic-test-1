@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uluberia Government Polytechnic College</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description" content="Official website of Uluberia Government Polytechnic College, West Bengal. Find information about departments, admission, notice, and contact details." />
+  <meta name="keywords" content="Uluberia Polytechnic, Government College, Diploma Engineering, Admission, CST, ME, CHE, West Bengal" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Uluberia Government Polytechnic Logo" />
+      <h1>ULUBERIA GOVERNMENT POLYTECHNIC COLLEGE</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-university"></i> Institute <i class="fas fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="faculty.html">Faculty & Staff</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+          </ul>
+        </li>
+        <li><a href="notice.html"><i class="fa-solid fa-exclamation fa-bounce"></i> Notice</a></li>
+        <li><a href="admission.html"><i class="fas fa-school"></i> Admission</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-phone-volume fa-beat"></i> Contact</a></li>
+        <li><a href="download.html"><i class="fas fa-download"></i> Download</a></li>
+        <li>
+          <button id="loginBtn" style="background:#007BFF;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;">Login</button>
+          <button id="registerBtn" style="background:#28a745;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;">Register</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="overlay">
+        <h2>Welcome to</h2>
+        <h1>Uluberia Government Polytechnic College</h1>
+      </div>
+    </section>
+
+    <section class="subjects">
+      <a href="cst.html" class="subject-card"><i class="fas fa-desktop"></i><p>CST</p></a>
+      <a href="me.html" class="subject-card"><i class="fas fa-cogs"></i><p>ME</p></a>
+      <a href="che.html" class="subject-card"><i class="fas fa-flask"></i><p>CHE</p></a>
+    </section>
+
+    <section class="principal-message">
+      <div class="message-container">
+        <div class="image">
+          <img src="principal.jpeg" alt="Principal of Uluberia Government Polytechnic" />
+        </div>
+        <div class="text-box">
+          <p class="quote">❝</p>
+          <p class="message">
+            I am very proud to be the founding principal of this institute named Uluberia Government Polytechnic, under the Government of West Bengal. The institute began its journey in the academic session 2021–22, offering three-year diploma courses in Mechanical Engineering, Computer Science and Technology, and Chemical Engineering, duly approved by AICTE. I believe that the faculty members and staff, along with myself, will put in every effort to make this institute a reputed one not only in West Bengal but across India.
+            <br><br>Thanks,<br>Principal<br>Uluberia Government Polytechnic
+          </p>
+          <p class="quote right">❞</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Uluberia Government Polytechnic</h3>
+        <p>
+          Mouza- Barberia JL No-34 L.R.<br>
+          Khatian No-1, Boalia<br>
+          Uluberia, Howrah: 711316<br>
+          Email: <a href="mailto:uluberiagovpoly@gmail.com">uluberiagovpoly@gmail.com</a>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="notice.html">Notice</a></li>
+          <li><a href="admission.html">Admission</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Related Links</h4>
+        <ul>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-section map-section">
+        <h4>Location</h4>
+        <iframe
+          src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Uluberia+Government+Polytechnic711316&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          allowfullscreen=""
+        ></iframe>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>🎉 Special Event!</h2>
+      <p>2nd sem result out. Check your result.</p>
+      <p>Click <a href="https://exam.webscte.co.in/student/checkResult">here</a> for more details.</p>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('load', function () {
+      if (!sessionStorage.getItem('popupShown')) {
+        document.getElementById('popup').style.display = 'flex';
+        sessionStorage.setItem('popupShown', 'true');
+      }
+    });
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+
+  <!-- Firebase Auth -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAsa8D6ijFJqZAVyxECYstT86Lo7QNM2oM",
+      authDomain: "ugp-college-site.firebaseapp.com",
+      projectId: "ugp-college-site",
+      storageBucket: "ugp-college-site.appspot.com",
+      messagingSenderId: "613694980447",
+      appId: "1:613694980447:web:7d3f81705f9188ae5936ea",
+      measurementId: "G-P0F2YSGRGJ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    // Google Login
+    document.getElementById('loginBtn').addEventListener('click', () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const user = result.user;
+      console.log("Full user data:", user);
+      alert(`✅ Welcome, ${user.displayName || user.email || "User"}`);
+    })
+    .catch((error) => {
+      console.error("Error details:", error);
+      alert(`❌ Login failed!\n\nCode: ${error.code}\nMessage: ${error.message}`);
+    });
+});
+
+    // Email Register Example (simple prompt)
+    document.getElementById('registerBtn').addEventListener('click', () => {
+      const email = prompt("Enter your email:");
+      const password = prompt("Enter a password (min 6 characters):");
+      if(email && password){
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert(`Registered successfully! Welcome, ${email}`);
+          })
+          .catch((error) => {
+            console.error(error);
+            alert("Registration failed: " + error.message);
+          });
+      }
+    });
+  </script>
+
+  <!-- Voiceflow Widget -->
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '6890ab4e17643c0ee1a265c0' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production',
+            voice: { url: "https://runtime-api.voiceflow.com" }
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+        v.type = "text/javascript"; 
+        s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Results - UGP</title>
+  <link rel="stylesheet" href="download.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+      <h1>Uluberia Government Polytechnic</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <!-- <li><a href="#"><i class="fas fa-download"></i> Download</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main class="download-section">
+    <h2><i class="fas fa-file-download"></i> Download Documents</h2>
+    <ul class="download-list">
+      <li><a href="https://exam.webscte.co.in/student/checkResult" download>2nd Semester Result </a></li>
+      <li><a href="https://sctvesd.wb.gov.in/syllabus/syllabus/download_uploaded_pdf/s3/02e74f10e0327ad868d138f2b4fdd6f0" download>3rd sem syllabus(PDF)</a></li>
+      <li><a href="results/final-year-result.pdf" download>Final Year Result (PDF)</a></li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Uluberia Government Polytechnic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
